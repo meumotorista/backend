@@ -1,5 +1,5 @@
-import { supabase } from '../config/supabase';
-import { Ride, RideStatus } from '../types';
+import { supabase } from '../config/supabase.js';
+import { Ride, RideStatus } from '../types/index.js';
 
 export class RideService {
   async requestRide(riderId: string, pickup: string, destination: string, pickupAddr: string, destAddr: string) {

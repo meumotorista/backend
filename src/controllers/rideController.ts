@@ -1,5 +1,5 @@
 import { Request, Response } from 'express';
-import { RideService } from '../services/rideService';
+import { RideService } from '../services/rideService.js';
 
 const rideService = new RideService();
 
@@ -16,7 +16,7 @@ export class RideController {
 
   async accept(req: Request, res: Response) {
     try {
-      const { rideId } = req.params;
+      const rideId = req.params.rideId as string;
       const { driverId } = req.body;
       const ride = await rideService.acceptRide(rideId, driverId);
       res.json(ride);
@@ -27,7 +27,7 @@ export class RideController {
 
   async getStatus(req: Request, res: Response) {
     try {
-      const { rideId } = req.params;
+      const rideId = req.params.rideId as string;
       const ride = await rideService.getRideById(rideId);
       res.json(ride);
     } catch (error: any) {

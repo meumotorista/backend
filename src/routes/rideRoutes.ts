@@ -1,5 +1,5 @@
 import { Router } from 'express';
-import { RideController } from '../controllers/rideController';
+import { RideController } from '../controllers/rideController.js';
 
 const router = Router();
 const rideController = new RideController();
