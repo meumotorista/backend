@@ -16,6 +16,7 @@
   "packageManager": "pnpm@10.28.0",
   "dependencies": {
     "@supabase/supabase-js": "^2.90.1",
+    "@vercel/node": "^3.2.11",
     "cors": "^2.8.5",
     "dotenv": "^17.2.3",
     "express": "^5.2.1",
@@ -32,6 +33,7 @@
     "@types/node": "^25.0.9",
     "@types/supertest": "^6.0.3",
     "@types/swagger-jsdoc": "^6.0.4",
+    "@vercel/node": "^3.2.11",
     "@types/swagger-ui-express": "^4.1.6",
     "jest": "^30.2.0",
     "nodemon": "^3.1.11",
