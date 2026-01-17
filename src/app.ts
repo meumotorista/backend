@@ -1,6 +1,8 @@
 import express from 'express';
 import cors from 'cors';
 import helmet from 'helmet';
+import swaggerUi from 'swagger-ui-express';
+import specs from './config/swagger';
 
 import userRoutes from './routes/userRoutes';
 import driverRoutes from './routes/driverRoutes';
@@ -12,6 +14,9 @@ const app = express();
 app.use(helmet());
 app.use(cors());
 app.use(express.json());
+
+// Swagger documentation
+app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(specs, { explorer: true }));
 
 // Routes
 app.get('/health', (req, res) => {
