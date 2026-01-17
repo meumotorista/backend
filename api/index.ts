@@ -20,19 +20,32 @@ app.get('/swagger.json', (req, res) => {
 });
 
 // Routes
-app.use('/api/rides', rideRoutes);
+app.use('/rides', rideRoutes);
 
 // Health check
 app.get('/health', (req, res) => {
   res.json({ status: 'ok', message: 'Meu Motorista API is running' });
 });
 
+// Root path
+app.get('/', (req, res) => {
+  res.json({ 
+    message: 'Meu Motorista API',
+    endpoints: {
+      health: '/health',
+      rides: '/rides',
+      docs: '/api-docs'
+    }
+  });
+});
+
 export default app;
 
-export const api = async (req: VercelRequest, res: VercelResponse) => {
+export const handler = async (req: VercelRequest, res: VercelResponse) => {
   try {
-    app(req as any, res as any);
+    return app(req as any, res as any);
   } catch (error) {
-    res.status(500).json({ error: 'Internal server error' });
+    console.error('Error:', error);
+    return res.status(500).json({ error: 'Internal server error' });
   }
 };
