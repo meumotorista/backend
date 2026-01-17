@@ -13,8 +13,8 @@ if [ -f "vercel.json" ]; then
     echo "   ❌ versão não encontrada"
   fi
   
-  if grep -q '"buildCommand": "pnpm run build"' vercel.json; then
-    echo "   ✅ buildCommand: pnpm run build"
+  if grep -q '"buildCommand": "npm run build"' vercel.json; then
+    echo "   ✅ buildCommand: npm run build"
   else
     echo "   ❌ buildCommand incorreto"
   fi
@@ -51,7 +51,7 @@ if [ -d "dist/api" ]; then
     echo "   ❌ dist/api/index.js não encontrado"
   fi
 else
-  echo "   ❌ dist/api/ não existe - execute: pnpm run build"
+  echo "   ❌ dist/api/ não existe - execute: npm run build"
 fi
 
 # Verificar .vercelignore

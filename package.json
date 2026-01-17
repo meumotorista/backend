@@ -13,7 +13,6 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "packageManager": "pnpm@10.28.0",
   "dependencies": {
     "@supabase/supabase-js": "^2.90.1",
     "@vercel/node": "^3.2.11",

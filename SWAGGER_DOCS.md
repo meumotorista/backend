@@ -9,7 +9,7 @@ A API Meu Motorista agora possui documentação interativa via Swagger/OpenAPI 3
 Primeiro, instale as dependências necessárias:
 
 ```bash
-pnpm install
+npm install
 ```
 
 As seguintes bibliotecas foram adicionadas ao projeto:
@@ -21,14 +21,14 @@ As seguintes bibliotecas foram adicionadas ao projeto:
 Para iniciar o servidor em modo de desenvolvimento:
 
 ```bash
-pnpm dev
+npm run dev
 ```
 
 Ou para iniciar em modo de produção (após build):
 
 ```bash
-pnpm build
-pnpm start
+npm run build
+npm start
 ```
 
 ## Acessando a Documentação

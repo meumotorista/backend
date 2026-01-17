@@ -7,14 +7,14 @@
 ═══════════════════════════════════════════════════════════════════════════════
 
 1️⃣  Instalar dependências:
-    $ pnpm install
+    $ npm install
 
 2️⃣  Configurar variáveis:
     $ cp .env.example .env.local
     # Editar .env.local com credenciais Supabase
 
 3️⃣  Iniciar servidor:
-    $ pnpm dev
+    $ npm run dev
     # Acesse http://localhost:3000
 
 4️⃣  Acessar Swagger:
@@ -75,10 +75,10 @@
 ═══════════════════════════════════════════════════════════════════════════════
 
 DESENVOLVIMENTO LOCAL:
-  1. pnpm install                     (1 min)
+  1. npm install                      (1 min)
   2. cp .env.example .env.local       (1 min)
   3. Editar .env.local                (2 min)
-  4. pnpm dev                         (1 min)
+  4. npm run dev                      (1 min)
   5. Acessar http://localhost:3000/api-docs  (1 min)
 
 PRIMEIRO DEPLOYMENT:
@@ -116,10 +116,10 @@ NODE_ENV=development
 ═══════════════════════════════════════════════════════════════════════════════
 
 Desenvolvimento:
-  pnpm dev              Iniciar com hot reload (nodemon)
-  pnpm build            Compilar TypeScript
-  pnpm start            Executar versão compilada
-  pnpm test             Rodar testes
+  npm run dev           Iniciar com hot reload (nodemon)
+  npm run build         Compilar TypeScript
+  npm start             Executar versão compilada
+  npm test              Rodar testes
   
 Vercel:
   vercel                Deploy staging
@@ -188,9 +188,9 @@ backend/
 ═══════════════════════════════════════════════════════════════════════════════
 
 Desenvolvimento:
-  □ Código testado localmente (pnpm test)
-  □ Build sem erros (pnpm build)
-  □ Servidor rodando (pnpm dev)
+  □ Código testado localmente (npm test)
+  □ Build sem erros (npm run build)
+  □ Servidor rodando (npm run dev)
   □ Swagger acessível
   
 Repositório:
