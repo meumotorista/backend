@@ -1,0 +1,10 @@
+.git
+.gitignore
+README.md
+SWAGGER_DOCS.md
+node_modules
+npm-debug.log
+.env
+.env.*
+.DS_Store
+*.log
